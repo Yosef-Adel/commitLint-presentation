@@ -189,7 +189,6 @@ const GitGraphSection = forwardRef<HTMLElement>((props, ref) => {
           </div>
         </div>
       </div>
-      <ChevronDown className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-6 h-6 animate-bounce text-gray-500" />
     </section>
   )
 })
