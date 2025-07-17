@@ -8,9 +8,16 @@ const GandalfMemeSection = forwardRef<HTMLElement>((props, ref) => {
           <span className="text-purple-400">Commitlint: Preventing Non-Compliant Commits</span>
         </h2>
         <div className="flex items-center justify-center space-x-6 md:space-x-12 text-lg md:text-xl flex-wrap gap-6">
-          <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 text-center">
-            <span className="text-4xl block mb-2">👤</span>
-            <p className="text-gray-400">You</p>
+          <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-1 text-center">
+            <span className="text-4xl block">
+              <img
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcomicvine.gamespot.com%2Fa%2Fuploads%2Foriginal%2F0%2F77%2F6289665-n6mktt64.jpg&f=1&nofb=1&ipt=926597be42e00aa4563eb46b4e9683ebb0768226ed85a9e4095e3eb2efda26b2"
+                alt="Gandalf saying You Shall Not Pass"
+                className="w-[100px] h-auto mx-auto mt-4 rounded-lg shadow-lg"
+              />
+
+            </span>
+            <p className="text-gray-400">Balorg</p>
           </div>
           <span className="text-2xl text-gray-500">➝</span>
           <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 text-center">
