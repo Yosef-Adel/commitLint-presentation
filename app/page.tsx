@@ -47,6 +47,7 @@ export default function GitCommitsPresentation() {
       switch (event.key) {
         case "ArrowRight":
         case "ArrowDown":
+        case "j":
           event.preventDefault()
           if (currentSlide < totalSlides - 1) {
             scrollToSlide(currentSlide + 1)
@@ -54,6 +55,7 @@ export default function GitCommitsPresentation() {
           break
         case "ArrowLeft":
         case "ArrowUp":
+        case "k":
           event.preventDefault()
           if (currentSlide > 0) {
             scrollToSlide(currentSlide - 1)
