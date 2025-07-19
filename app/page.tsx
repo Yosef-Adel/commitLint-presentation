@@ -5,7 +5,6 @@ import { useEffect, useState, useRef } from "react"
 // Import all section components
 import GitGraphSection from "@/components/sections/git-graph-section"
 import VideoSection from "@/components/sections/video-section"
-import DescriptiveTextSection from "@/components/sections/descriptive-text-section"
 import ProblemSection from "@/components/sections/problem-section"
 import HeroSection from "@/components/sections/hero-section"
 import WhatItDoesSection from "@/components/sections/what-it-does-section"
@@ -14,15 +13,13 @@ import HowItWorksSection from "@/components/sections/how-it-works-section"
 import CiIntegrationSection from "@/components/sections/ci-integration-section"
 import DemoSection from "@/components/sections/demo-section"
 import WhyItMattersSection from "@/components/sections/why-it-matters-section"
-import BeforeAfterSection from "@/components/sections/before-after-section"
 import CustomizeSection from "@/components/sections/customize-section"
-import BonusToolsSection from "@/components/sections/bonus-tools-section"
 import FinalThoughtsSection from "@/components/sections/final-thoughts-section"
 import CallToActionSection from "@/components/sections/call-to-action-section"
 
 export default function GitCommitsPresentation() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const totalSlides = 15 // Total number of slides
+  const totalSlides = 13 // Total number of slides
   const sectionRefs = useRef<(HTMLElement | null)[]>([])
 
   useEffect(() => {
@@ -103,8 +100,8 @@ export default function GitCommitsPresentation() {
             key={index}
             onClick={() => scrollToSlide(index)}
             className={`w-6 h-6 rounded-full transition-all duration-300 text-xs font-medium ${currentSlide === index
-                ? "bg-purple-500 text-white shadow-lg shadow-purple-500/50"
-                : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white"
+              ? "bg-purple-500 text-white shadow-lg shadow-purple-500/50"
+              : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white"
               }`}
           >
             {index + 1}
@@ -115,20 +112,17 @@ export default function GitCommitsPresentation() {
       {/* Render each section, passing a ref */}
       <GitGraphSection ref={(el) => (sectionRefs.current[0] = el)} />
       <VideoSection ref={(el) => (sectionRefs.current[1] = el)} />
-      {/* <DescriptiveTextSection ref={(el) => (sectionRefs.current[2] = el)} /> */}
       <ProblemSection ref={(el) => (sectionRefs.current[2] = el)} />
       <HeroSection ref={(el) => (sectionRefs.current[3] = el)} />
       <WhatItDoesSection ref={(el) => (sectionRefs.current[4] = el)} />
       <GandalfMemeSection ref={(el) => (sectionRefs.current[5] = el)} />
       <HowItWorksSection ref={(el) => (sectionRefs.current[6] = el)} />
-      <CiIntegrationSection ref={(el) => (sectionRefs.current[7] = el)} />
-      <DemoSection ref={(el) => (sectionRefs.current[8] = el)} />
-      <WhyItMattersSection ref={(el) => (sectionRefs.current[9] = el)} />
-      <BeforeAfterSection ref={(el) => (sectionRefs.current[10] = el)} />
-      <CustomizeSection ref={(el) => (sectionRefs.current[11] = el)} />
-      <BonusToolsSection ref={(el) => (sectionRefs.current[12] = el)} />
-      <FinalThoughtsSection ref={(el) => (sectionRefs.current[13] = el)} />
-      <CallToActionSection ref={(el) => (sectionRefs.current[14] = el)} />
+      <CustomizeSection ref={(el) => (sectionRefs.current[7] = el)} />
+      <CiIntegrationSection ref={(el) => (sectionRefs.current[8] = el)} />
+      <DemoSection ref={(el) => (sectionRefs.current[9] = el)} />
+      <WhyItMattersSection ref={(el) => (sectionRefs.current[10] = el)} />
+      <FinalThoughtsSection ref={(el) => (sectionRefs.current[11] = el)} />
+      <CallToActionSection ref={(el) => (sectionRefs.current[12] = el)} />
     </div>
   )
 }
